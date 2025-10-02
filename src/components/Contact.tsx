@@ -1,93 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Phone, Mail, MapPin, Star, Award, Users } from 'lucide-react';
 import Oracle from '../imagens/oracle.jpeg.jpeg';
 import Martins from '../imagens/martins.png.png';
 import Tribanco from '../imagens/tribanco.jpeg';
-import Vander from '../imagens/vander.png';
-import Willian from '../imagens/willian.png';
-import Davi from '../imagens/davi.png';
-import Guilherme from '../imagens/guilherme.png.jpeg';
-import Juliano from '../imagens/juliano.png';
-import Kristen from '../imagens/kristen.png';
-import Adriel from '../imagens/adriel.png';
 
 // Importando fontes do Google
 const fontStyles = `
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap');
 `;
 
-// Membros da equipe
-
-const teamMembers = [
-  {
-    name: 'Willian Roberto',
-    role: 'CEO & Fundador',
-    description: 'Atuo à frente de uma empresa moderna e adaptada às novas demandas, com foco em desenvolvimento de apps e sites, consultoria em tecnologia, alocação de recursos e serviços especializados em Oracle Applications Cloud.',
-    photo: Willian,
-    linkedin: 'https://www.linkedin.com/in/willian-roberto-silva-37b28816b/',
-  },
-  {
-    name: 'Juliano César',
-    role: 'Líder técnico',
-    description: 'Líder técnico com experiência em projetos de sistemas, do design à entrega, com foco em qualidade, segurança e inovação. Entrego soluções viáveis que aumentam a eficiência e a satisfação dos clientes. Sou movido por desafios, apaixonado por resolver problemas e reconhecido pela atitude proativa, motivação e engenhosidade.',
-    photo: Juliano,
-    linkedin: "https://www.linkedin.com/in/juliano-c%C3%A9sar-b76a33160/",
-  },
-  {
-    name: 'Vander Reis',
-    role: 'Desenvolvedor Back-end Sênior',
-    description: 'Desenvolvedor sênior com foco em arquitetura de sistemas, APIs escaláveis e integração com bancos de dados. Experiência sólida em .NET, C#, Azure, SQL Server, Git. Comprometido com performance, segurança e boas práticas de desenvolvimento.',
-    photo: Vander,
-    linkedin: 'https://www.linkedin.com/in/vander-reis-044163201/',
-  },
-  {
-    name: 'Adriel Gonzaga',
-    role: 'Desenvolvedor Full Stack Sênior',
-    description: 'Atuo no desenvolvimento de aplicações completas com foco em performance, escalabilidade e boas práticas. Experiência sólida com React, Vue, JavaScript, TypeScript, Node.js, Java, C# e .NET, entregando soluções modernas e eficientes para diferentes necessidades de negócio.',
-    photo: Adriel,
-    linkedin: 'https://www.linkedin.com/in/vander-reis-044163201/',
-  },
-
-  {
-    name: 'Guilherme Otávio',
-    role: 'Desenvolvedor Full Skack Sênior',
-    description: 'Desenvolvedor .NET focado em criar soluções práticas, escaláveis e bem organizadas. Experiência em desenvolver sistemas que otimizam processos e resultados, sempre com atenção à qualidade do código, performance e facilidade de manutenção. Comprometido com boas práticas, entregas eficientes e soluções alinhadas às necessidades do negócio.',
-    photo: Guilherme,
-    linkedin: 'https://www.linkedin.com/in/guilherme-ot%C3%A1vio-094727a0/',
-  },
-  {
-    name: 'Davi Borges',
-    role: 'Desenvolvedor Back-end',
-    description: 'Desenvolvedor Back-End especializado em construir sistemas robustos, escaláveis e seguros. Experiência com design de APIs, integração com bancos de dados e otimização de performance. Foco em código limpo, boas práticas e soluções eficientes que atendem às necessidades do negócio.',
-    photo: Davi,
-    linkedin: 'https://www.linkedin.com/in/davi-borges-198132250/',
-  },
-  {
-    name: 'Kristen Pavarine',
-    role: 'Estagiário',
-    description: 'Atuo como estagiário em desenvolvimento fullstack, com conhecimento em JavaScript, TypeScript, React e Node.js. Atualmente, estou aprofundando meus estudos em C#, .NET e Oracle, buscando ampliar minhas habilidades no back-end e contribuir cada vez mais com soluções eficientes e bem estruturadas para os projetos da equipe.',
-    photo: Kristen,
-    linkedin: 'https://www.linkedin.com/in/kristen-pavarine-7b6a14328/',
-  },
-];
-
-// Efeito para slides automáticos
 
 const Contact = () => {
-  const [current, setCurrent] = useState(0);
-  const total = teamMembers.length;
-
-  // Efeito para slides automáticos
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % total);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, [total]);
-
-  const prev = () => setCurrent((prev) => (prev - 1 + total) % total);
-  const next = () => setCurrent((prev) => (prev + 1) % total);
 
   return (
     <>
@@ -175,81 +98,6 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Seção de Membros da Equipe */}
-      <section id="team" className="py-14 sm:py-20 bg-gradient-to-b from-blue-50 to-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAzNGMwIDIuMjA5LTEuNzkxIDQtNCA0cy00LTEuNzkxLTQtNCAxLjc5MS00IDQtNCA0IDEuNzkxIDQgNHoiIGZpbGw9IiMwNzE1NDMiIGZpbGwtb3BhY2l0eT0iLjA1Ii8+PC9nPjwvc3ZnPg==')] opacity-50 animate-pulse"></div>
-        <div className="container mx-auto px-2 sm:px-4 relative">
-          <div className="text-center mb-10 sm:mb-16 transform hover:scale-105 transition-transform duration-300">
-            <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 text-[#071543] animate-fade-in font-playfair">
-              Nossa <span className="text-[#2593c1] relative inline-block group">
-                equipe
-                <span className="absolute -bottom-2 left-0 w-full h-1 bg-[#2593c1] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-              </span>
-            </h2>
-            <div className="h-1 w-20 sm:w-32 bg-gradient-to-r from-[#071543] to-[#2593c1] mx-auto mb-4 sm:mb-6"></div>
-            <p className="text-base sm:text-xl text-gray-600 max-w-xs sm:max-w-2xl mx-auto animate-fade-in-up font-poppins">
-              Conheça os profissionais talentosos que fazem parte do nosso time.
-            </p>
-          </div>
-          {/* Carrossel de membros da equipe */}
-          <div className="flex flex-col items-center justify-center relative w-full max-w-xs sm:max-w-2xl mx-auto">
-            <div className="w-full transition-all duration-500">
-              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-4 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 group border border-gray-100">
-                <div className="flex flex-col sm:flex-row items-center gap-6">
-                  <div className="w-32 h-32 sm:w-48 sm:h-48 rounded-full overflow-hidden border-4 border-[#2593c1] group-hover:scale-105 transition-transform duration-300">
-                    <img 
-                      src={teamMembers[current].photo} 
-                      alt={teamMembers[current].name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="flex-1 text-center sm:text-left">
-                    <h4 className="text-xl sm:text-2xl font-bold text-gray-800 group-hover:text-[#2593c1] transition-colors duration-300 font-playfair">
-                      {teamMembers[current].name}
-                    </h4>
-                    <p className="text-base sm:text-lg text-[#2593c1] font-semibold mb-3 font-poppins">
-                      {teamMembers[current].role}
-                    </p>
-                    <p className="text-gray-700 mb-4 font-poppins">
-                      {teamMembers[current].description}
-                    </p>
-                    <a 
-                      href={teamMembers[current].linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-[#2593c1] hover:text-[#071543] transition-colors duration-300"
-                    >
-                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                      </svg>
-                      LinkedIn
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* Navegação do carrossel */}
-            <div className="flex justify-center mt-6 gap-2">
-              <button onClick={prev} aria-label="Anterior" className="p-2 rounded-full bg-white/80 hover:bg-[#2593c1] hover:text-white shadow transition-all duration-300">
-                <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-              </button>
-              {teamMembers.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrent(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    current === index ? 'bg-[#2593c1] scale-125' : 'bg-gray-300 hover:bg-[#2593c1]/50'
-                  }`}
-                  aria-label={`Ir para slide ${index + 1}`}
-                />
-              ))}
-              <button onClick={next} aria-label="Próximo" className="p-2 rounded-full bg-white/80 hover:bg-[#2593c1] hover:text-white shadow transition-all duration-300">
-                <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
       {/* Seção de Contato */}
       <section id="contact" className="py-10 sm:py-16 md:py-20 bg-gradient-to-b from-blue-50 to-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAzNGMwIDIuMjA5LTEuNzkxIDQtNCA0cy00LTEuNzkxLTQtNCAxLjc5MS00IDQtNCA0IDEuNzkxIDQgNHoiIGZpbGw9IiMwNzE1NDMiIGZpbGwtb3BhY2l0eT0iLjA1Ii8+PC9nPjwvc3ZnPg==')] opacity-50 animate-pulse"></div>
