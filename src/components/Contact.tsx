@@ -3,6 +3,14 @@ import { Phone, Mail, MapPin, Star, Award, Users } from 'lucide-react';
 import Oracle from '../imagens/oracle.jpeg.jpeg';
 import Martins from '../imagens/martins.png.png';
 import Tribanco from '../imagens/tribanco.jpeg';
+import Efacil from '../imagens/efacil.jpg';
+import Iamar from '../imagens/iamar.jpg';
+import Smart from '../imagens/smart.gif';
+import TribancoSeguros from '../imagens/tribancoseguros.jpg';
+import Tricard from '../imagens/tricard.png';
+import Umv from '../imagens/umv.webp';
+import UnicaMaquina from '../imagens/unicamaquina.jpg';
+import HorizontalCarousel from './HorizontalCarousel';
 
 // Importando fontes do Google
 const fontStyles = `
@@ -11,6 +19,17 @@ const fontStyles = `
 
 
 const Contact = () => {
+  const logos = [
+    { src: Martins, alt: 'Martins' },
+    { src: Tribanco, alt: 'Tribanco' },
+    { src: Efacil, alt: 'Efacil' },
+    { src: Iamar, alt: 'Iamar' },
+    { src: Smart, alt: 'Smart' },
+    { src: TribancoSeguros, alt: 'Tribanco Seguros' },
+    { src: Tricard, alt: 'Tricard' },
+    { src: Umv, alt: 'UMV' },
+    { src: UnicaMaquina, alt: 'Unica Maquina' },
+  ];
 
   return (
     <>
@@ -42,7 +61,7 @@ const Contact = () => {
               <div className="flex items-center justify-center mb-4">
                 <Star className="w-12 h-12 text-[#2593c1] group-hover:animate-bounce group-hover:text-white transition-colors duration-300" />
               </div>
-              <h3 className="text-3xl font-bold text-white text-center mb-2 group-hover:text-[#2593c1] transition-colors duration-300 font-poppins">20+</h3>
+              <h3 className="text-3xl font-bold text-white text-center mb-2 group-hover:text-[#2593c1] transition-colors duration-300 font-poppins">90+</h3>
               <p className="text-gray-200 text-center group-hover:text-white transition-colors duration-300 font-poppins">Projetos Entregues</p>
             </div>
           </div>
@@ -87,14 +106,7 @@ const Contact = () => {
               Veja alguns dos principais clientes para quem já entregamos soluções e projetos de sucesso.
             </p>
           </div>
-          <div className="flex flex-col md:flex-row items-center justify-center gap-16">
-            <div className="w-80 h-44 bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex items-center justify-center group hover:shadow-[0_0_30px_rgba(37,147,193,0.3)]">
-              <img src={Martins} alt="Martins" className="max-h-32 max-w-full object-contain transform group-hover:scale-110 transition-transform duration-300" />
-            </div>
-            <div className="w-80 h-44 bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex items-center justify-center group hover:shadow-[0_0_30px_rgba(37,147,193,0.3)]">
-              <img src={Tribanco} alt="Tribanco" className="max-h-32 max-w-full object-contain transform group-hover:scale-110 transition-transform duration-300" />
-            </div>
-          </div>
+          <HorizontalCarousel items={logos} intervalMs={1500} visibleCount={4} />
         </div>
       </section>
 
