@@ -38,7 +38,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         {/* Logo */}
-        <div className="text-6xl md:text-7xl font-bold">
+        <div className="text-[3rem] font-bold">
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#071543] via-[#2593c1] to-[#3c5c84]">
             TechOne
           </span>
@@ -54,7 +54,7 @@ const Navbar = () => {
               smooth={true}
               offset={-70}
               duration={500}
-              className={`mx-4 cursor-pointer transition-colors duration-300 text-xl md:text-2xl ${
+            className={`mx-4 cursor-pointer transition-colors duration-300 text-[1.1rem] ${
                 scrolled ? 'text-[#071543] hover:text-[#2593c1]' : 'text-[#071543] hover:text-[#2593c1]'
               }`}
             >
@@ -88,7 +88,7 @@ const Navbar = () => {
                 smooth={true}
                 offset={-70}
                 duration={500}
-                className="py-3 text-xl text-[#071543] hover:text-[#2593c1] cursor-pointer"
+                className="py-3 text-[1.1rem] text-[#071543] hover:text-[#2593c1] cursor-pointer"
                 onClick={toggleMenu}
               >
                 {link.name}
