@@ -136,8 +136,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="text-base sm:text-lg font-bold text-gray-800 mb-1 sm:mb-2 group-hover:text-[#2593c1] transition-colors duration-300 font-playfair">Telefone</h4>
-                    <a href="tel:+553499293034" className="text-sm sm:text-base text-gray-600 hover:text-[#2593c1] transition-colors duration-300 font-poppins">
-                      (34) 99293-0034
+                    <a href="tel:+5534991147348" className="text-sm sm:text-base text-gray-600 hover:text-[#2593c1] transition-colors duration-300 font-poppins">
+                      34991147348
                     </a>
                   </div>
                 </div>
@@ -206,7 +206,7 @@ const Contact = () => {
 
                   <div className="flex flex-col items-center space-y-4">
                     <a
-                      href="https://wa.me/553499293034?text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20os%20serviços%20da%20TechOne."
+                      href="https://wa.me/5534991147348?text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20os%20serviços%20da%20TechOne."
                       target="_blank"
                       rel="noopener noreferrer"
                       className="group relative flex items-center px-6 sm:px-8 md:px-10 py-3 sm:py-4 bg-[#25D366] text-white text-base sm:text-lg md:text-xl font-bold rounded-xl shadow-lg transition-all duration-300 hover:scale-110 hover:bg-[#1ebe57] focus:outline-none focus:ring-4 focus:ring-[#2593c1]/40 hover:shadow-[0_0_30px_rgba(37,211,102,0.5)] animate-pulse font-poppins overflow-hidden"
@@ -233,7 +233,7 @@ const Contact = () => {
 
       {/* Botão flutuante de WhatsApp */}
       <a
-        href="https://wa.me/553499293034?text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20os%20serviços%20da%20TechOne."
+        href="https://wa.me/5534991147348?text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20os%20serviços%20da%20TechOne."
         target="_blank"
         rel="noopener noreferrer"
         className="fixed z-50 bottom-4 sm:bottom-6 md:bottom-8 right-4 sm:right-6 md:right-8 flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-[#25D366] rounded-full shadow-lg sm:shadow-xl hover:shadow-2xl hover:bg-[#1ebe57] transition-all duration-300 group animate-bounce hover:shadow-[0_0_30px_rgba(37,211,102,0.5)]"

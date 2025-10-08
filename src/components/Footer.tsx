@@ -139,8 +139,8 @@ const Footer = () => {
                 </a>
               </li>
               <li className="text-gray-300">
-                <a href="https://wa.me/553499293034" target="_blank" rel="noopener noreferrer" className="hover:text-[#2593c1]">
-                  (34) 99293-0034
+                <a href="https://wa.me/5534991147348" target="_blank" rel="noopener noreferrer" className="hover:text-[#2593c1]">
+                  (34) 9911 - 47348
                 </a>
               </li>
             </ul>
